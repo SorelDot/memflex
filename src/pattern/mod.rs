@@ -27,7 +27,7 @@ pub trait Matcher {
     fn len(&self) -> usize;
 }
 
-impl<'a> Matcher for &'a [u8] {
+impl Matcher for &[u8] {
     fn matches(&self, seq: &[u8]) -> bool {
         seq.len() == self.len() && self.iter().zip(seq.iter()).all(|(a, b)| a.eq(b))
     }
