@@ -4,6 +4,9 @@
 ```toml
 [dependencies]
 memflex = "0.8"
+
+[patch.crates-io]
+memflex = { git = "https://github.com/SorelDot/memflex", branch = "master" }
 ```
 
 # Features
